@@ -1,3 +1,3 @@
 module.exports = {
-  workoutSeed: require('./Workout.js')
+  Workout: require('./Workout.js')
 }
