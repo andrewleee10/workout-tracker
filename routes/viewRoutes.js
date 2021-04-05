@@ -1,16 +1,17 @@
 const router = require('express').Router()
-const { Workout } = require('../models')
+const path = require("path")
 
 
-router.get('/exercise', (req, res) => Workout.find()
-  .then(workouts => {
-    console.log(workouts)
-    res.json(workouts)
-  })
-  .catch(err => console.log(err)))
+router.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/index.html"))
+})
 
-router.get('/exercise/:id', (req, res) => Workout.findById(req.params.id)
-  .then(workout => res.json(workout))
-  .catch(err => console.log(err)))
+router.get('/exercise', (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/exercise.html"))
+})
+
+router.get('/stats', (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/stats.html"))
+})
 
 module.exports = router
