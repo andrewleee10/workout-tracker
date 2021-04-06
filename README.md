@@ -5,4 +5,4 @@ The workout-tracker is a full stack application that utilizes MongoDB for its da
 
 ## Links
 [Github Repo](https://github.com/andrewleee10/workout-tracker)
-[Deployed Link]()
+[Deployed Link](https://radiant-lake-58230.herokuapp.com/)
